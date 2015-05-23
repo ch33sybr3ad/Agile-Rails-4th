@@ -9,12 +9,14 @@
 
 <body id='store'>
   <div id='banner'>
-    <%= image_tag("logo.png") %>
+    <%= image_tag("https://media.pragprog.com/images/cms/logos/Bookshelf_4in.png") %>
     <%= @page_title || "Pragmatic Bookshelf" %>
+
   </div>
 
   <div id="columns">
     <div id="side">
+      <p style='color:orange;' ><%= Time.now %></p>
       <p><%= link_to "Home", root_path %></p>
       <p><%= link_to "Questions", root_path %></p>
       <p><%= link_to "News", root_path %></p>
