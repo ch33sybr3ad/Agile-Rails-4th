@@ -6,9 +6,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body id='store'>
+  <div id='banner'>
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+
+  <div id="columns">
+    <div id="side">
+      <p><%= link_to "Home", root_path %></p>
+      <p><%= link_to "Questions", root_path %></p>
+      <p><%= link_to "News", root_path %></p>
+      <p><%= link_to "Contact", root_path %></p>
+    </div>
+
+    <div id='main'>
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
+
 </html>
